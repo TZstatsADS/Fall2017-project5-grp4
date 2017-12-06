@@ -5,7 +5,6 @@ Term: Fall 2017
 + Group 4
 + Projec title: Urban Sound Classification
 + Team members
-
         + Chen, Tiantian
 	+ Li, Yijia
 	+ Lin, Han
