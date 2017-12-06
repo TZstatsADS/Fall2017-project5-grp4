@@ -52,7 +52,7 @@ Our main file can be found here, and our ppt can be found here.
 ![accuracy for each class](figs/acu_bar.png)
 ![accuracy for each class](figs/acu_bubble.png)
    + Accuracy table:
-![table](figs/table.png)
+![accuracy table](figs/acu_table.png)
 
 + **Improvement**
     + Use a larger dataset on the [official website](https://serv.cusp.nyu.edu/projects/urbansounddataset/) which contains more than 8000 audio records with these 10 different classes. Intuitively, more data available,  more accurate for model performs.
