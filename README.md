@@ -62,8 +62,7 @@ We extracted 193 features from these recordings, covering the features of melspe
     + Try to extract other kinds of features.
 	
 + **Contribution statement**: 
-
-    + Xiaoyu Zhou: Wrote code for GBM classification model and computed the accuracy rate, evaluation part of this method. Revised the ppt file and gave the presentation on class. Responsible for writing and running part of main.rmd file. 
+    + Zhou, Xiaoyu: Wrote code for GBM classification model and computed the accuracy rate, evaluation part of this method. Revised the ppt file and gave the presentation on class. Responsible for writing and running part of main.rmd file. 
 
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
