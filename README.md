@@ -11,7 +11,13 @@ Term: Fall 2017
 	+ Shi, Qian
 	+ Zhou, Xiaoyu (Presenter)
 
-+ **Project summary**: This is a project to classify unban sounds automatically with machine learning models. Our data comes from Urban Sound Dataset, which contains 1302 labeled sound recordings from 10 different classes. We extracted 193 features from these recordings, covering the features of melspectrogram, mfcc, chorma-stft, spectral_contrast and tonnetz. We split the original data and used 70% of them to train the models of GBM, Linear Regression, Random Forest, XGBoost and SVM (with 3 different kernels: linear, rbf, poly), which were applied to classify the left 30% data. Best result was produced by XGBoost, with a accuracy rate of around 75%. Apart from total accuracy rate, we also compared the training time consumed by different models and accuracy rate for each class. 
++ **Project summary**: 
+
+This is a project to classify unban sounds automatically with machine learning models. Our data comes from Urban Sound Dataset, which contains 1302 labeled sound recordings from 10 different classes. 
+
+We extracted 193 features from these recordings, covering the features of melspectrogram, mfcc, chorma-stft, spectral_contrast and tonnetz. We splitted the original data and used 70% of them to train the models of GBM, Linear Regression, Random Forest, XGBoost and SVM (with 3 different kernels: linear, rbf, poly), which were applied to classify the left 30% data. Best result was produced by XGBoost, with a accuracy rate of around 75%. Apart from total accuracy rate, we also compared the training time consumed by different models and accuracy rate for each class. 
+
+Our main file can be found here, and our ppt can be found here.
 
 + **Data**
 	+ Source: [Urban Sound Dataset](https://serv.cusp.nyu.edu/projects/urbansounddataset/)
@@ -30,6 +36,15 @@ Term: Fall 2017
 		+ tonnetz: Computes the tonal centroid features (tonnetz)
 	+ Output: Matrix of 1102 rows, 193 columns
 
++ **Model**
+        
+	+ GBM
+	+ Logistic Regression
+	+ Random Forest
+	+ XGBoost
+	+ SVM
+
+
 + **Result Comparation**
 ![total accuracy](figs/total_accuracy.png)
 ![time](figs/time_length.png)
@@ -37,9 +52,9 @@ Term: Fall 2017
 ![table](figs/table.png)
 
 + **Improvement**
-    + Use a lager dataset on the [official website](https://serv.cusp.nyu.edu/projects/urbansounddataset/) which contains more than 8000 audio records with these 10 different classes. Intuitively, more data available,  more accurate for model performs.
-    + Setup a more complex CNN with at least 10 layers, and with some other techniques, such as adding zero-padding or dropout layer to classify those audios.
-    + Try to use differenct combinations within those five kinds of features we extracted.  We have assumed that perhaps some kinds of the features are much more outstanding than others. So why not try to ignore those "unuseful" features, at some points, reduce dimensions, and train the model on the subset of the features. The result could be exciting, or not.
+    + Use a larger dataset on the [official website](https://serv.cusp.nyu.edu/projects/urbansounddataset/) which contains more than 8000 audio records with these 10 different classes. Intuitively, more data available,  more accurate for model performs.
+    + Set up a more complex CNN with at least 10 layers, and with some other techniques, such as adding zero-padding or dropout layer to classify those audios.
+    + Try to use different combinations within those five kinds of features we extracted.  We have assumed that perhaps some kinds of the features are much more outstanding than others. So why not try to ignore those "unuseful" features, at some points, reduce dimensions, and train the model on the subset of the features. The result could be exciting, or not.
     + Try to extract other kinds of features.
 	
 + **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement.
