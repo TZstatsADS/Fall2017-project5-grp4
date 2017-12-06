@@ -30,6 +30,14 @@ Term: Fall 2017
 		+ tonnetz: Computes the tonal centroid features (tonnetz)
 	+ Output: Matrix of 1102 rows, 193 columns
 
++ **Model**
+        + GBM
+	+ Logistic Regression
+	+ Random Forest
+	+ XGBoost
+	+ SVM
+
+
 + **Result Comparation**
 ![total accuracy](figs/total_accuracy.png)
 ![time](figs/time_length.png)
