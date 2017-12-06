@@ -5,7 +5,7 @@ Term: Fall 2017
 + Group 4
 + Projec title: Urban Sound Classification
 + Team members
-	+ Chen, Tiantian
+        + Chen, Tiantian
 	+ Li, Yijia
 	+ Lin, Han
 	+ Shi, Qian
@@ -61,7 +61,8 @@ We extracted 193 features from these recordings, covering the features of melspe
     + Try to extract other kinds of features.
 	
 + **Contribution statement**: All team members approve our work presented in this GitHub repository including this contributions statement.
-
+    + Han Lin
+        + Downloaded 16 GB audio file from Urban Sound website.
 
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
