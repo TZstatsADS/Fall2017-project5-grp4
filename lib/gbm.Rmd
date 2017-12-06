@@ -1,0 +1,64 @@
+---
+title: "GBM Method"
+author: "Xiaoyu Zhou  UNI:xz2599"
+date: "December 3, 2017"
+output: html_document
+---
+
+```{r}
+#GBM Method
+install.packages("gbm")
+library(gbm)
+feature_train=read.csv("../data/x_train.csv",header = T)
+lable_train=read.csv("../data/y_train.csv",header = T)
+train_data=data.frame(cbind(lable_train,feature_train[,-1]))
+colnames(train_data)[1]="y"
+features =train_data
+label_train=train_data
+y=label_train[,1]
+X=features[,-1]
+source(../data/tune gbm.r)
+err_cv
+colnames(err_cv) = c("mean of cv.error","sd of cv.error")
+rownames(err_cv) = c("depth = 3", "depth = 5", "depth = 7", "depth = 9","depth = 11")
+write.csv(err_cv,file = "../output/err_cv_for_baseline.csv")
+
+#We chose depth=7, n.trees = 500,shrinkages = 0.01, 
+
+depth=7
+shrinkage=0.01
+train<-function(X, y, depth, shrinkage){
+  fit_gbm = gbm.fit(X, y,
+                    distribution = "multinomial",
+                    n.trees = 500,
+                    interaction.depth = depth, 
+                    shrinkage = shrinkage,
+                    bag.fraction = 0.5,
+                    verbose=FALSE)
+  best_iter <- gbm.perf(fit_gbm, method="OOB", plot.it = FALSE)
+  return(model=list(fit=fit_gbm, iter=best_iter))
+}
+mm=train(X,y,7,0.01)
+
+
+feature_test=read.csv("../data/x_test.csv",header = T)
+lable_test=read.csv("../data/y_test.csv",header = T)
+test_data=data.frame(cbind(lable_test,feature_test[,-1]))
+test_data2= test_data[,-1]
+
+test.gbm <- function(model, test.data)
+{
+  pred<- predict(model$fit, newdata = test.data, n.trees = model$iter, type="response")
+  pred<-data.frame(pred)
+  return(apply(pred,1,which.max)-1)
+}
+nn=test.gbm(mm,test_data2)
+lable_test$pd=nn
+sum(lable_test$X0==lable_test$pd)/nrow(lable_test)
+#The accuracy rate is 68.27795%.
+#The code running time is roughly 20mins.
+
+
+
+```
+
