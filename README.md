@@ -35,6 +35,12 @@ Term: Fall 2017
 ![time](figs/time_length.png)
 ![accuracy bar](figs/acu_bar.png)
 ![accuracy bubble](figs/acu_bubble.png) <!-- .element height="20%" width="20%" -->
+
++ **Improvement**
++ Use a lager dataset on the official website (https://serv.cusp.nyu.edu/projects/urbansounddataset/) which contains more than 8000 audio records with these 10 different classes. Intuitively, more data available,  more accurate for model performs.
++ Setup a much more complex CNN with at least 10 layers, with some other techniques, such as adding zero-padding or dropout layer to classify those audios.
++ Try to use differenct combinations within those five kinds of features we extracted.  We have assumed that perhaps some kinds of the features are much more outstanding than others. So why not try to ignore those "unuseful" features, at some points, reduce dimensions, and train the model on the subset of the features. The result could be exciting, or not.
++ Try to extract other kinds of features.
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
