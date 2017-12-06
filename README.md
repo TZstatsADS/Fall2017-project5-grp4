@@ -21,7 +21,7 @@ Term: Fall 2017
 	+ Usage: 30% of the data is regarded as test data
 	
 + **Result Comparation**
-![total accuracy](./figs/total_accuracy.png=150x)
+![total accuracy](./figs/total_accuracy.png)
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
