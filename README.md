@@ -63,6 +63,7 @@ We extracted 193 features from these recordings, covering the features of melspe
 	
 + **Contribution statement**: All team members approve our work presented in this GitHub repository including this contributions statement.
     + Han Lin
+    
         + Downloaded 16 GB audio file from Urban Sound website.
         + Extracted mfccs,chroma,mel,contrast,tonnetz features from raw audio files using librosa library in python.
 	+ Implemented Logistic regression model and 2-layer neural network model.
