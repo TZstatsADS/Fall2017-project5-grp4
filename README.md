@@ -60,7 +60,19 @@ We extracted 193 features from these recordings, covering the features of melspe
     + Try to use different combinations within those five kinds of features we extracted.  We have assumed that perhaps some kinds of the features are much more outstanding than others. So why not try to ignore those "unuseful" features, at some points, reduce dimensions, and train the model on the subset of the features. The result could be exciting, or not.
     + Try to extract other kinds of features.
 	
-+ **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement.
++ **Contribution statement**: All team members approve our work presented in this GitHub repository including this contributions statement.
+
++ Han Lin
+
+* Downloaded 16 GB audio file from Urban Sound website
+
+* Extracted mfccs,chroma,mel,contrast,tonnetz features from raw audio files using librosa library in python
+
+* Implemented Logistic regression model and 2-layer neural network model
+
+* Organized main file
+
+* Organized Github
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
