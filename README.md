@@ -46,13 +46,13 @@ Our main file can be found here, and our ppt can be found here.
 
 
 + **Result Comparation**
-    + Total accuracy and traing times:
+   + Total accuracy and traing times:
 ![total accuracy and time](figs/put_together.png)
-    + Accuracy for each class:
+   + Accuracy for each class:
 ![accuracy for each class](figs/acu_bar.png)
 
 ![accuracy for each class](figs/acu_bubble.png)
-    + Accuracy table:
+   + Accuracy table:
 ![table](figs/table.png)
 
 + **Improvement**
