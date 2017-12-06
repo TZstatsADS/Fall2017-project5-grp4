@@ -34,8 +34,7 @@ Term: Fall 2017
 ![total accuracy](figs/total_accuracy.png)
 ![time](figs/time_length.png)
 ![accuracy bar](figs/acu_bar.png)
-![accuracy bubble](figs/acu_bubble.png)
-
+![accuracy bubble](figs/acu_bubble.png) <!-- .element height="50%" width="50%" -->
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
