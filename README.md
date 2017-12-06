@@ -17,7 +17,7 @@ This is a project to classify unban sounds automatically with machine learning m
 
 We extracted 193 features from these recordings, covering the features of melspectrogram, mfcc, chorma-stft, spectral_contrast and tonnetz. We splitted the original data and used 70% of them to train the models of GBM, Linear Regression, Random Forest, XGBoost and SVM (with 3 different kernels: linear, rbf, poly), which were applied to classify the left 30% data. Best result was produced by XGBoost, with a accuracy rate of around 75%. Apart from total accuracy rate, we also compared the training time consumed by different models and accuracy rate for each class. 
 
-Our main file can be found [here](doc/main_file.pdf), and our ppt can be found [here](doc/presentation.pdf).
+**Our main file can be found [here](doc/main_file.pdf), and our ppt can be found [here](doc/presentation.pdf).**
 
 + **Data**
 	+ Source: [Urban Sound Dataset](https://serv.cusp.nyu.edu/projects/urbansounddataset/)
