@@ -5,6 +5,7 @@ Term: Fall 2017
 + Group 4
 + Projec title: Urban Sound Classification
 + Team members
+
 	+ Chen, Tiantian
 	+ Li, Yijia
 	+ Lin, Han
@@ -60,8 +61,8 @@ We extracted 193 features from these recordings, covering the features of melspe
     + Try to use different combinations within those five kinds of features we extracted.  We have assumed that perhaps some kinds of the features are much more outstanding than others. So why not try to ignore those "unuseful" features, at some points, reduce dimensions, and train the model on the subset of the features. The result could be exciting, or not.
     + Try to extract other kinds of features.
 	
-+ **Contribution statement**: All team members approve our work presented in this GitHub repository including this contributions statement.
-
++ **Contribution statement**: 
+    + Zhou, Xiaoyu: Wrote code for GBM classification model and computed the accuracy rate, evaluation part of this method. Revised the ppt file and gave the presentation on class. Responsible for writing and running part of main.rmd file. 
 
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
