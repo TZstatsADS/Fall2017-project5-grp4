@@ -19,12 +19,23 @@ Term: Fall 2017
 	+ Format: each recording is a wav file
 	+ Content: 10 classes of sounds ( air_conditioner, car_horn, children_playing, dog_bark, drilling, enginge_idling, gun_shot, jackhammer, siren, and street_music )
 	+ Usage: 30% of the data is regarded as test data
-	
+
++ **Feature**
+	+ Tool: Librosa library in Python
+	+ Methods: 
+		+ melspectro gram (Compute a Mel-scaled power)
+		+ mfcc: Mel-frequency cepstral coefficients
+		+ chorma-stft: chromagram from a waveform/power spectrogram
+		+ spectral_contrast: Compute spectral contrast, using method
+		+ tonnetz: Computes the tonal centroid features (tonnetz)
+	+ Output: Matrix of 1102 rows, 193 columns
+
 + **Result Comparation**
 ![total accuracy](figs/total_accuracy.png)
+![time](figs/time_length.png)
 ![accuracy bar](figs/acu_bar.png)
 ![accuracy bubble](figs/acu_bubble.png)
-![time](figs/time_length.png)
+
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
