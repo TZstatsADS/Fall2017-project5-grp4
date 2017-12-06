@@ -48,7 +48,7 @@ Our main file can be found here, and our ppt can be found here.
 + **Result Comparation**
 ![total accuracy](figs/total_accuracy.png)
 ![time](figs/time_length.png)
-![accuracy for each class](figs/acu_combine.png)<!-- .element height="20%" width="20%" -->
+![accuracy for each class](figs/acu_combine.png)
 ![table](figs/table.png)
 
 + **Improvement**
