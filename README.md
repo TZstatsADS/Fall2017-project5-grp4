@@ -31,7 +31,6 @@ Term: Fall 2017
 	+ Output: Matrix of 1102 rows, 193 columns
 
 + **Model**
-
         + GBM
 	+ Logistic Regression
 	+ Random Forest
