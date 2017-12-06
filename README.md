@@ -24,12 +24,12 @@ Our main file can be found here, and our ppt can be found here.
 	+ Size: 1302 labeled sound recordings
 	+ Format: each recording is a wav file
 	+ Content: 10 classes of sounds ( air_conditioner, car_horn, children_playing, dog_bark, drilling, enginge_idling, gun_shot, jackhammer, siren, and street_music )
-	+ Usage: 30% of the data is regarded as test data
+	+ Usage: 70% of the data is regarded as training set, while the rest of the data is used as test set
 
 + **Feature**
 	+ Tool: Librosa library in Python
 	+ Methods: 
-		+ melspectro gram (Compute a Mel-scaled power)
+		+ melspectro gram (compute a Mel-scaled power)
 		+ mfcc: Mel-frequency cepstral coefficients
 		+ chorma-stft: chromagram from a waveform/power spectrogram
 		+ spectral_contrast: Compute spectral contrast, using method
@@ -42,7 +42,7 @@ Our main file can be found here, and our ppt can be found here.
 	+ Logistic Regression
 	+ Random Forest
 	+ XGBoost
-	+ SVM
+	+ SVM (linear, RBF kernel, polynomial kernel)
 
 
 + **Result Comparation**
@@ -52,7 +52,7 @@ Our main file can be found here, and our ppt can be found here.
 ![accuracy for each class](figs/acu_bar.png)
 ![accuracy for each class](figs/acu_bubble.png)
    + Accuracy table:
-![accuracy table](figs/acu_table.png)<!-- .element height="20%" width="20%" -->
+![accuracy table](figs/acu_table.png)
 
 + **Improvement**
     + Use a larger dataset on the [official website](https://serv.cusp.nyu.edu/projects/urbansounddataset/) which contains more than 8000 audio records with these 10 different classes. Intuitively, more data available,  more accurate for model performs.
