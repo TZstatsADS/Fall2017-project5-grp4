@@ -46,7 +46,7 @@ We extracted 193 features from these recordings, covering the features of melspe
 	+ SVM (linear, RBF kernel, polynomial kernel)
 
 
-+ **Result Comparasion**
++ **Result Comparison**
    + Total accuracy and traing times:
 ![total accuracy and time](figs/put_together.png)
    + Accuracy for each class:
