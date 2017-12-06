@@ -1,0 +1,102 @@
+---
+title: "Random Forest"
+author: 'Author: Yijia Li'
+output:
+  html_document: default
+  html_notebook: default
+  pdf_document: default
+---
+
+## Load and process data
+
+```{r}
+library(randomForest)
+training_y<- read.csv("../data/y_train.csv")
+training_x<- read.csv("../data/x_train.csv")
+testing_y<- read.csv("../data/y_test.csv")
+testing_x<- read.csv("../data/x_test.csv")
+colnames(training_y)<- "y"
+colnames(testing_y)<- "y"
+```
+
+## Train and Test Function
+
+```{r}
+rf_train<- function(dat, label, N){
+  library(randomForest)
+  df <- as.data.frame(cbind(dat, label))
+  set.seed(11)
+  fit <- randomForest(as.factor(y)~.,data = df, importance = TRUE, ntree = N)
+  return(fit)
+}
+
+rf_test<- function(model, dat){
+  pred <-predict(model,newdata=dat)
+  return (pred)
+}
+```
+
+## Chooce the best parameter use cross validation
+
+```{r}
+N<-c(300,400,500,600,700,800,900)
+for(i in 1:7){
+  tm_train=NA
+  tm_train <- system.time(result <- rfcv(training_x, as.factor(unlist(training_y)), cv.fold=3, N=N[i]))
+  cat("Accuracy rate for " ,N[i]," trees is ", 1-result$error.cv[1], "\n" )
+  cat("Elapsed time for " ,N[i]," trees is ", tm_train[3], "seconds \n")
+}
+
+#Accuracy rate for  300  trees is  0.5836576 
+#Elapsed time for  300  trees is  67.399 seconds 
+#Accuracy rate for  400  trees is  0.6005188 
+#Elapsed time for  400  trees is  53.329 seconds 
+#Accuracy rate for  500  trees is  0.6018158 
+#Elapsed time for  500  trees is  44.299 seconds 
+#Accuracy rate for  600  trees is  0.6095979 
+#Elapsed time for  600  trees is  49.748 seconds 
+#Accuracy rate for  700  trees is  0.6095979 
+#Elapsed time for  700  trees is  64.86 seconds 
+#Accuracy rate for  800  trees is  0.5966278 
+#Elapsed time for  800  trees is  40.308 seconds 
+#Accuracy rate for  900  trees is  0.6108949 
+#Elapsed time for  900  trees is  46.791 seconds 
+```
+
+## Train the model with the best N and test the model using test dataset
+
+```{r}
+tm_train=NA
+tm_train <- system.time(fit <- rf_train(training_x,training_y,N=900))
+cat("Elapsed time for training is ", tm_train[3], "seconds \n")
+
+tm_test <- system.time(pred_test <- rf_test(fit, testing_x))
+error <- mean(pred_test != as.factor(unlist(testing_y)))
+cat("Accuracy rate = ", 1-error, "\n")
+cat("Elapsed time for testing is ", tm_test[3], "seconds \n")
+
+#Elapsed time for training is  37.09 seconds 
+#Accuracy rate =  0.6646526 
+#Elapsed time for testing is  0.144 seconds 
+```
+
+## Accuracy rate for each label
+
+```{r}
+correct_list=c(0,0,0,0,0,0,0,0,0,0)
+label_list=c(0,0,0,0,0,0,0,0,0,0)
+for (i in 1:length(pred_test)){
+  for (j in 0:9){
+    if (as.factor(unlist(testing_y))[i] == j){
+      label_list[j+1] = label_list[j+1]+1
+      if (as.factor(unlist(testing_y))[i] == pred_test[i]){
+      correct_list[j+1] = correct_list[j+1]+1
+      }
+    }    
+  }
+}
+accuracy_list <- correct_list/label_list
+round(accuracy_list, 2)
+
+#0.18 0.57 0.73 0.90 0.50 0.35 0.83 0.33 0.33 0.69
+```
