@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(ggplot2)
+library(gridExtra)
 df <- data.frame(model = rep(c('xgb', 'lr', 'svm (linear)', 'gbm', 'rf', 'svm (rbf)', 'svm (poly)'), each=10),
                  class = c("air_conditioner", "car_horn", "children_playing",
                            "dog_bark", "drilling", "enginge_idling",
@@ -31,26 +32,38 @@ df$class<- factor(df$class, levels = c("air_conditioner", "car_horn", "children_
 ```
 
 ```{r}
-ggplot(data=df, aes(x=class, y=accuracy, fill=model)) +
+bar<- ggplot(data=df, aes(x=class, y=accuracy, fill=model)) +
   geom_col(position='dodge', width=0.7, alpha=0.8)+
   ggtitle("Accuracy for 10 different classes audios",
           subtitle="(with 5 different models)")+
   ylim(0, 1)+
+  labs(x = "", y = "")+
   coord_flip()+
   theme_grey(11)+
-  theme(legend.title=element_blank())+
-  scale_fill_manual(values = c("#ee4035", "#7bc043", "#f37736", "#fcec4d", "#0392cf", "#c79ddc", "#9a8262"))
+  theme(legend.title = element_blank())+
+  scale_fill_manual(values = c("#ee4035", "#7bc043", "#f37736", "#fcec4d", "#0392cf", "#c79ddc", "#9a8262"))+
+  theme(axis.text.y = element_text(face="bold", size=9),
+        plot.title = element_text(face="bold", size=14), 
+        plot.subtitle = element_text(face="italic", size=10))
 ```
 
 ```{r}
-ggplot(df, aes(x=class, y=accuracy, color=model))+
+bub<- ggplot(df, aes(x=class, y=accuracy, color=model))+
   geom_point(size=5, alpha=0.7)+
   ggtitle("Accuracy for 10 different classes audios",
           subtitle="(with 5 different models)")+
   ylim(0, 1)+
+  labs(x = "", y = "")+
   coord_flip()+
   scale_color_manual(values = c("#ee4035", "#7bc043", "#f37736", "#fcec4d", "#0392cf", "#c79ddc", "#9a8262"))+
   theme_grey(11)+
-  theme(legend.title=element_blank())
+  theme(legend.title=element_blank())+
+  theme(axis.text.y = element_text(face="bold", size=9),
+        plot.title = element_text(face="bold", size=14), 
+        plot.subtitle = element_text(face="italic", size=10))
+```
+
+```{r, fig.height=4, fig.width=8}
+grid.arrange(bar, bub, ncol=2)
 ```
 
