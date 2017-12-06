@@ -46,8 +46,7 @@ Term: Fall 2017
 
 
 + **Result Comparation**
-![total accuracy](figs/total_accuracy.png)
-![time](figs/time_length.png)
+![total accuracy and time](figs/put_together.png)
 ![accuracy for each class](figs/acu_combine.png)
 ![table](figs/table.png)
 
