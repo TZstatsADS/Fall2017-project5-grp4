@@ -51,7 +51,7 @@ Our main file can be found here, and our ppt can be found here.
     + Accuracy for each class:
 ![accuracy for each class](figs/acu_bar.png)
 
-![accuracy for each class](figs/acu_bub.png)
+![accuracy for each class](figs/acu_bubble.png)
     + Accuracy table:
 ![table](figs/table.png)
 
