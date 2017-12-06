@@ -944,7 +944,8 @@ In this step, we drew different plots to compare the result.
 The final result could be found in Step 5: Summary.
 
 ```{r,eval=FALSE}
-df <- data.frame(model = rep(c('xgb', 'lr', 'svm (linear)', 'gbm', 'rf', 'svm (rbf)', 'svm (poly)'), each=10),
+df <- data.frame(model = rep(c('xgb', 'lr', 'svm (linear)', 'gbm', 
+                               'rf', 'svm (rbf)', 'svm (poly)'), each=10),
                  class = c("air_conditioner", "car_horn",
                            "children_playing",
                            "dog_bark", "drilling", "enginge_idling",
