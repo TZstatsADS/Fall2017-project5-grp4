@@ -35,6 +35,7 @@ Term: Fall 2017
 ![time](figs/time_length.png)
 ![accuracy bar](figs/acu_bar.png)
 ![accuracy bubble](figs/acu_bubble.png) <!-- .element height="20%" width="20%" -->
+![table](figs/table.png)
 
 + **Improvement**
     + Use a lager dataset on the [official website](https://serv.cusp.nyu.edu/projects/urbansounddataset/) which contains more than 8000 audio records with these 10 different classes. Intuitively, more data available,  more accurate for model performs.
