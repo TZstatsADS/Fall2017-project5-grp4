@@ -66,6 +66,7 @@ We extracted 193 features from these recordings, covering the features of melspe
     + Lin, Han: Downloaded 16 GB audio file from Urban Sound website. Extracted features from raw audio files using librosa library in python. Implemented Logistic regression model and 2-layer neural network model. Organized main file. Organized Github.Drew accuracy comparison draft plot.
     + Chen, Tiantian: Implemented XGBoost model to classify sounds and evaluated its performance; designed frame and prepared slide for presentation; wrote majority part of readme file collaborating with other group members; contributed to edit main.rmd file; looked into feature extraction method collaborating with Han Lin.
     + Li, Yijia: Ran cross-validation to tune the parameters of Random Forest and evaluated its performance; Responsible for editing part of main.rmd file.
+    + Shi, Qian:  Used cross-validation to train SVM model with linear, RBF kernel and polynomial kernel on audio features; got the accuracy information from Han Lin and make a barplot and also a strip dotplot to more clearly compare through each model, or each class; contributed to write readme file for “Result Comparison” and “Improvement” parts; responsible for editing part of main.rmd file.
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
