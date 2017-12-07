@@ -63,7 +63,7 @@ We extracted 193 features from these recordings, covering the features of melspe
 	
 + **Contribution statement**: 
     + Zhou, Xiaoyu: Wrote code for GBM classification model and computed the accuracy rate, evaluation part of this method. Revised the ppt file and gave the presentation on class. Responsible for writing and running part of main.rmd file. 
-
+    + Lin, Han: Downloaded 16 GB audio file from Urban Sound website. Extracted features from raw audio files using librosa library in python. Implemented Logistic regression model and 2-layer neural network model. Organized main file. Organized Github.Drew accuracy comparison draft plot.
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
